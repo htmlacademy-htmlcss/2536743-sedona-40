@@ -11,10 +11,10 @@
 
     <header class="page-header" data-test="header">
       <nav class="main-navigation">
-        <img class="logo-img" src="#" alt="Логотип Седона">
+        <a class="logo-link" href="index.html" aria-current="page"><img class="logo-img" src="#" alt="Логотип Седона"></a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">Главная</a>
+            <a class="navigation-link navigation-link-current" href="#" aria-current="page">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -39,8 +39,7 @@
     <main class="main-index" data-test="main">
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Седона - город в Аризоне</h1>
-        <img class="image-welcome" src="#" alt="Надпись добро пожаловать в великолепие седоны,
-         потому что гранд коньен отдыхает">
+        <img class="image-welcome" src="#" alt="Welcome to the gorgeus Sedona. Because Grand Canyon sucks.">
       </section>
       <section class="advantages" data-test="advantages">
         <h2 class="section-title">Седона — небольшой городок в Аризоне,
@@ -65,9 +64,9 @@
             <p class="advantages-item-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item advantages-item-extended">
+            <img class="advantages-item-image" src="#" alt="Мост дьявола">
             <h3 class="advantages-item-title">Там есть мост дьявола</h3>
             <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-            <img class="advantages-item-image" src="#" alt="Мост дьявола">
           </li>
         </ul>
       </section>
@@ -97,7 +96,7 @@
         <h2 class="section-title">Заинтересовались?</h2>
         <p class="section-subtitle">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
           Седоне</p>
-        <a class="button btn-search" href="catalog.html">Поиск гостиницы в Седоне</a>
+        <button class="button btn-search" type="button">Поиск гостиницы в Седоне</button>
       </section>
       <section class="subscription subscription-decorated" data-test="subscribe">
         <h2 class="section-title">Подпишитесь на рассылку</h2>
