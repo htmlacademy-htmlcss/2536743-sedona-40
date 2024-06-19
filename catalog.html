@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Гостиницы</title>
   </head>
 
@@ -13,33 +14,31 @@
         <a class="logo-link" href="index.html" aria-current="page"><img class="logo-img" src="images/svg/logo.svg"
           width="140" height="70" alt="Логотип Седона"></a>
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#" aria-current="page">Главная</a>
+          <li class="navigation-list-item">
+            <a class="navigation-list-link" href="index.html">Главная</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
+          <li class="navigation-list-item">
+            <a class="navigation-list-link" href="#">О Седоне</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+          <li class="navigation-list-item">
+            <a class="navigation-list-link navigation-link-current" href="#" aria-current="page">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#"><span class="visally-hidden">Поиск</span></a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#"><span class="visally-hidden">Поиск</span></a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#"><span class="visally-hidden">Избранное</span></a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#"><span class="visally-hidden">Избранное</span></a>
             <span class="visually-hidden">Отелей в избранном</span><sup>12</sup>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link button" href="catalog.html">Хочу сюда!</a>
-          </li>
         </ul>
+        <a class="button btn-want" href="catalog.html">Хочу сюда!</a>
       </nav>
     </header>
 
     <main class="main-inner" data-test="main">
-      <div class="header_and-filter">
+      <div class="header-and-filter">
         <header class="inner-header">
           <h1>Гостиницы Седоны</h1>
           <ul class="breadcrumbs-list">
@@ -47,6 +46,7 @@
               <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">Главная</span></a>
             </li>
             <li class="breadcrumbs-item">
+              <span class="breadcrumbs-arrow" arial-label="hidden"></span>
               <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
             </li>
           </ul>
@@ -101,14 +101,14 @@
               </ul>
             </fieldset>
             <fieldset class="filter-price">
-              <legend class="filter-price-title">Стоимость, &#8381;:</legend>
-              <label class="label-filter-price-min">
+              <legend class="filter-group-title">Стоимость, &#8381;:</legend>
+              <label class="label-filter-price">
                 <span>От</span>
-                <input class="filter-price-min" type="text" name="filter-price-min" value="0">
+                <input class="input-filter-price" type="text" name="filter-price-min" value="0">
               </label>
-              <label class="label-filter-price-max">
+              <label class="label-filter-price">
                 <span>До</span>
-                <input class="filter-price-max" type="text" name="filter-price-max" value="9000">
+                <input class="input-filter-price" type="text" name="filter-price-max" value="9000">
               </label>
             </fieldset>
             <div class="filter-buttons">
@@ -120,7 +120,7 @@
       </div>
       <section class="catalog-hotels" data-test="catalog">
         <div class="search-result">
-          <h2>Найдено гостиниц: <output>38</output></h2>
+          <h2 class="search-result-title">Найдено гостиниц: <output>38</output></h2>
           <select class="control-select" aria-label="Сортировка">
             <option value="popular">Сначала популярные</option>
             <option value="cheap" selected>Сначала дешёвые</option>
@@ -133,46 +133,54 @@
         </div>
         <ul class="hotels-list">
           <li class="hotels-list-item">
-            <img class="image-hotel" src="images/catalog-hotel-1.jpg" width="300" height="212"
-             alt="Вид зведного неба из пещеры">
+            <div class="image-hotel-wrapper">
+              <img class="image-hotel" src="images/catalog-hotel-1.jpg" width="300" height="212"
+              alt="Вид зведного неба из пещеры">
+            </div>
             <h3 class="hotel-title">Amara Resort & Spa</h3>
             <p class="house-type">Гостиница</p>
             <p class="house-price">От 4000 ₽</p>
             <a class="button btn-about-hotel" href="#">Подробнее</a>
-            <button class="button btn-add-to-favourites" type="button">В избранное</button>
+            <button class="button btn-favorite btn-add-to-favourites" type="button">В избранное</button>
             <span class="visually-hidden">Четыре звезды</span>
             <p class="house-rating">Рейтинг: 8,5</p>
           </li>
           <li class="hotels-list-item">
-            <img class="image-hotel" src="images/catalog-hotel-2.jpg" width="300" height="212"
-             alt="Скала на фоне вечернего неба с облаками и радуги">
+            <div class="image-hotel-wrapper">
+              <img class="image-hotel" src="images/catalog-hotel-2.jpg" width="300" height="212"
+              alt="Скала на фоне вечернего неба с облаками и радуги">
+            </div>
             <h3 class="hotel-title">Villas at Poco Diablo</h3>
             <p class="house-type">Гостиница</p>
             <p class="house-price">От 5000 ₽</p>
             <a class="button btn-about-hotel" href="#">Подробнее</a>
-            <button class="button btn-delete-from-favourites" type="button">В избранном</button>
+            <button class="button btn-favorite btn-delete-from-favourites" type="button">В избранном</button>
             <span class="visually-hidden">Четыре звезды</span>
             <p class="house-rating">Рейтинг: 9,2</p>
           </li>
           <li class="hotels-list-item">
-            <img class="image-hotel" src="images/catalog-hotel-3.jpg" width="300" height="212"
-             alt="Скала на фоне дневного неба с облаками">
+            <div class="image-hotel-wrapper">
+              <img class="image-hotel" src="images/catalog-hotel-3.jpg" width="300" height="212"
+              alt="Скала на фоне дневного неба с облаками">
+            </div>
             <h3 class="hotel-title">Desert Quail Inn</h3>
             <p class="house-type">Гостиница</p>
             <p class="house-price">От 2500 ₽</p>
             <a class="button btn-about-hotel" href="#">Подробнее</a>
-            <button class="button btn-add-to-favourites" type="button">В избранное</button>
+            <button class="button btn-favorite btn-add-to-favourites" type="button">В избранное</button>
             <span class="visually-hidden">Три звезды</span>
             <p class="house-rating">Рейтинг: 6,9</p>
           </li>
           <li class="hotels-list-item">
-            <img class="image-hotel" src="images/catalog-hotel-4.jpg" width="300" height="212"
-             alt="Скала на фоне звездного неба">
+            <div class="image-hotel-wrapper">
+              <img class="image-hotel" src="images/catalog-hotel-4.jpg" width="300" height="212"
+              alt="Скала на фоне звездного неба">
+            </div>
             <h3 class="hotel-title">GreenTree Inn</h3>
             <p class="house-type">Гостиница</p>
             <p class="house-price">От 1500 ₽</p>
             <a class="button btn-about-hotel" href="#">Подробнее</a>
-            <button class="button btn-add-to-favourites" type="button">В избранное</button>
+            <button class="button btn-favorite btn-add-to-favourites" type="button">В избранное</button>
             <span class="visually-hidden">Две звезды</span>
             <p class="house-rating">Рейтинг: 5</p>
           </li>
@@ -222,10 +230,8 @@
         </li>
       </ul>
       <a class="phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-      <a class="academy-link" href="https://htmlacademy.ru/"><img class="image-academy" src="images/svg/logo-html-academy.svg"
+      <a class="academy-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="image-academy" src="images/svg/logo-html-academy.svg"
         width="115" height="33" alt="ссылка на сайт htmlacademy"></a>
     </footer>
-
   </body>
-
 </html>
