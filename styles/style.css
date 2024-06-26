@@ -70,10 +70,14 @@ body {
 }
 
 .navigation-list-item {
-  padding: 20px 16px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .navigation-list-link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
