@@ -14,6 +14,18 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 body {
   margin: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -24,6 +36,43 @@ body {
   background-color: #FFFFFF;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.page-header {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.main-navigation {
+  display: flex;
+}
+
+.logo-link {
+  margin-right: 28px;
+}
+
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  list-style-type: none;
+}
+
+.navigation-list-item {
+  padding: 20px 16px;
+}
+
 .navigation-list-link {
   font-size: 20px;
   line-height: 24px;
@@ -31,6 +80,21 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
+.navigation-user {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  list-style-type: none;
+}
+
+.navigation-user-item {
+  width: 18px;
+  height: 18px;
+  background-color: #000000;
+}
+
 
 .navigation-user-item sup {
   font-size: 10px;
@@ -50,8 +114,17 @@ body {
   border-radius: 4px;
 }
 
+.main-index {
+  flex-grow: 1;
+}
+
+.main-inner {
+  flex-grow: 1;
+}
+
 .hero {
-  text-align: center;
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-color: #FF9B40;
   background-image: url("../images/svg/mask.svg"), url("../images/index-background.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -59,23 +132,58 @@ body {
   background-size: 100% auto, cover;
 }
 
+.image-welcome {
+  display: block;
+  margin: 0 auto;
+}
+
 .advantages {
+  padding-top: 69px;
   text-align: center;
 }
 
 .section-title {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
+.advantages .section-title {
+  margin-bottom: 25px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
 .section-subtitle {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
 }
 
+.advantages .section-subtitle {
+  margin-bottom: 90px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages-item-extended {
+  display: flex;
+  grid-column: span 3;
+}
+
 .advantages-item {
+  min-height: 385px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -84,12 +192,14 @@ body {
 }
 
 .advantages-item-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
 .advantages-item-description {
+  margin: 0;
   color: #333333;
 }
 
@@ -106,7 +216,32 @@ body {
 }
 
 .services {
+  padding-top: 64px;
   text-align: center;
+}
+
+.services .section-title {
+  padding-left: 350px;
+  padding-right: 350px;
+}
+
+.services .section-subtitle {
+  margin-bottom: 64px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.services-item {
+  width: 400px;
+  min-height: 385px;
 }
 
 .services-item-title {
@@ -151,11 +286,30 @@ body {
 }
 
 .search-hotel {
+  padding-top: 96px;
+  padding-bottom: 96px;
   text-align: center;
 }
 
+.search-hotel .section-title {
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.search-hotel .section-subtitle {
+  margin-bottom: 54px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
 .subscription {
+  padding-top: 96px;
+  padding-bottom: 104px;
   text-align: center;
+}
+
+.subscription .section-subtitle {
+  margin-bottom: 54px;
 }
 
 .btn-subscribe {
@@ -180,6 +334,11 @@ body {
   color:#FFFFFF;
 }
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .phone {
   font-size: 40px;
   line-height: 40px;
@@ -189,7 +348,8 @@ body {
 
 /*styles for catalog*/
 
-.header-and-filter {
+.container-header-and-filter {
+  padding: 35px 70px 70px;
   color:#FFFFFF;
   background-color: #00A287;
   background-image: url("../images/filter-background.jpg");
@@ -198,10 +358,20 @@ body {
   background-size: cover;
 }
 
-h1 {
+
+.inner-header h1 {
+  margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
-  font-weight: 700;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .breadcrumbs-link {
@@ -209,6 +379,10 @@ h1 {
   line-height: 21px;
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.filter {
+  display: flex;
 }
 
 .filter-group-title {
@@ -240,7 +414,17 @@ h1 {
   background-color: transparent;
 }
 
+.catalog-hotels {
+  padding: 50px 70px 60px;
+}
+
+.search-result {
+  display: flex;
+  margin-bottom: 40px;
+}
+
 .search-result-title {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
 }
@@ -250,6 +434,23 @@ h1 {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+}
+
+.hotels-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.hotels-list-item {
+  width: 340px;
+  min-height: 438px;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
 }
 
 .image-hotel-wrapper {
@@ -275,13 +476,31 @@ h1 {
   text-transform: uppercase;
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
   color: #FFFFFF;
   text-decoration: none;
+  text-align: center;
   background-color: #82B3D3;
+  border-radius: 4px;
+
 }
 
 .pagination-link-current {
@@ -290,6 +509,12 @@ h1 {
 }
 
 .pagination-points {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 5px;
   font-size: 22px;
   line-height: 26px;
 }
