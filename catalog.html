@@ -91,21 +91,21 @@
                     <label class="filter-control">
                       <input class="filter-control-input visually-hidden" type="checkbox" name="pool" checked>
                       <span class="filter-control-checkbox"></span>
-                      <span>Бассейн</span>
+                      <span class="check-meaning">Бассейн</span>
                     </label>
                   </li>
                   <li class="filter-list-item">
                     <label class="filter-control">
-                      <input class="filter-control-input visually-hidden" type="checkbox" name="parking-space" checked>
+                      <input class="filter-control-input visually-hidden" type="checkbox" name="parking-space" checked disabled>
                       <span class="filter-control-checkbox"></span>
-                      <span>Парковка</span>
+                      <span class="check-meaning">Парковка</span>
                     </label>
                   </li>
                   <li class="filter-list-item">
                     <label class="filter-control">
                       <input class="filter-control-input visually-hidden" type="checkbox" name="wi-fi">
                       <span class="filter-control-checkbox"></span>
-                      <span>WI-FI</span>
+                      <span class="check-meaning">WI-FI</span>
                     </label>
                   </li>
                 </ul>
@@ -115,23 +115,23 @@
                 <ul class="filter-list">
                   <li class="filter-list-item">
                     <label class="filter-control">
-                      <input class="filter-control-input visually-hidden" type="radio" name="housing" value="hotel" checked>
+                      <input class="filter-control-input visually-hidden" type="radio" name="housing" value="hotel" checked disabled>
                       <span class="filter-control-radio"></span>
-                      <span>Гостиница</span>
+                      <span class="radio-meaning">Гостиница</span>
                     </label>
                   </li>
                   <li class="filter-list-item">
                     <label class="filter-control">
                       <input class="filter-control-input visually-hidden" type="radio" name="housing" value="motel">
                       <span class="filter-control-radio"></span>
-                      <span>Мотель</span>
+                      <span class="radio-meaning">Мотель</span>
                     </label>
                   </li>
                   <li class="filter-list-item">
                     <label class="filter-control">
                       <input class="filter-control-input visually-hidden" type="radio" name="housing" value="apartments">
                       <span class="filter-control-radio"></span>
-                      <span>Апартаменты</span>
+                      <span class="radio-meaning">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
@@ -142,22 +142,22 @@
                   <label class="label-filter-price">
                     <span class="filter-price-range-word">от</span>
                     <input class="input-filter-price input-filter-price-min" type="text" name="filter-price-min"
-                      value="0">
+                      value="0" placeholder="сумма" required>
                   </label>
                   <label class="label-filter-price">
                     <span class="filter-price-range-word">до</span>
                     <input class="input-filter-price input-filter-price-max" type="text" name="filter-price-max"
-                      value="9000">
+                      value="9000" placeholder="сумма" required>
                   </label>
                 </div>
                 <div class="range">
                   <div class="range-track">
                     <div class="range-selected" style="left: 0%; right: 20%;">
                       <button class="btn-range btn-range-min" type="button">
-                        <span class="visually-hidden">Ввести минимальную цену</span>
+                        <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
                       <button class="btn-range btn-range-max" type="button">
-                        <span class="visually-hidden">Ввести максимальную цену</span>
+                        <span class="visually-hidden">Изменить максимальную цену</span>
                       </button>
                     </div>
                   </div>
@@ -165,7 +165,7 @@
               </fieldset>
               <div class="filter-buttons">
                 <button class="button filter-btn-apply" type="submit">Применить</button>
-                <button class="button filter-btn-reset" type="reset">Сбросить</button>
+                <button class="filter-btn-reset" type="reset">Сбросить</button>
               </div>
             </form>
           </section>
@@ -266,6 +266,7 @@
           <h2 class="section-title">Подпишитесь на рассылку</h2>
           <p class="section-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru" method="POST">
+            <label class="visually-hidden">Введите адрес электронной почты</label>
             <input class="subscription-input-email" type="email" name="email" placeholder="Ваш e-mail" required>
             <button class="button btn-subscribe" type="submit">Подписаться</button>
           </form>

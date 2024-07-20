@@ -13,8 +13,10 @@
     <div class="container">
       <header class="page-header" data-test="header">
         <nav class="main-navigation">
-          <a class="logo-link" href="index.html" aria-current="page"><img class="logo-img" src="images/svg/logo.svg"
-              width="140" height="70" alt="Логотип Седона"></a>
+          <a class="logo-link" href="index.html" aria-current="page">
+            <img class="logo-img" src="images/svg/logo.svg"
+              width="140" height="70" alt="Логотип Седона">
+          </a>
           <ul class="navigation-list">
             <li class="navigation-list-item">
               <a class="navigation-list-link navigation-link-current" href="#" aria-current="page">Главная</a>
@@ -141,7 +143,7 @@
           <p class="section-subtitle">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru" method="POST">
             <label class="subscription-form-label">
-              <span class="visually-hidden">Введите свой e-mail</span>
+              <label class="visually-hidden">Введите адрес электронной почты</label>
               <input class="subscription-input-email" type="email" name="email" placeholder="Ваш e-mail" required>
             </label>
             <button class="button btn-subscribe" type="submit">Подписаться</button>
@@ -247,6 +249,46 @@
           </a>
         </div>
       </footer>
+
+      <div class="modal-container">
+        <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <legend class="modal-search-form-title">Поиск гостиницы в Седоне</legend>
+          <label class="modal-label ">Дата заезда:</label>
+          <input class="modal-input-date" type="text" name="modal-input-date" value="27 апреля 2020" placeholder="Введите дату" required>
+          <span class="modal-comment modal-comment-mistake">Мы не можем отправить вас в прошлое.</span>
+          <label class="modal-label">Дата выезда:</label>
+          <input class="modal-input-date" type="text" name="modal-input-date" value="1 сентября 2023" placeholder="Введите дату" required>
+          <span class="modal-comment">На эти даты есть свободные номера. Пока есть.</span>
+          <label class="modal-label" for="adult-quantity">Взрослые:</label>
+          <div class="modal-quantity-wrapper">
+            <button class="modal-btn-quantity btn-adult-quantity btn-adult-quantity-increase" type="button">
+              <span class="visually-hidden">Увеличить на одного человека</span>
+            </button>
+            <input class="modal-input-quantity" id="adult-quantity" type="text" name="adult-quantity" value="2" placeholder="2" required>
+            <button class="modal-btn-quantity btn-adult-quantity btn-adult-quantity-reduce" type="button">
+              <span class="visually-hidden">Уменьшить на одного человека</span>
+            </button>
+          </div>
+          <div class="child-quantity-info">
+            <label class="modal-label" for="child-quantity">Дети:</label>
+            <button class="btn-info-about-child">i</button>
+          </div>
+          <div class="modal-quantity-wrapper">
+            <button class="modal-btn-quantity btn-child-quantity btn-child-quantity-increase" type="button">
+              <span class="visually-hidden">Увеличить на одного человека</span>
+            </button>
+            <input class="modal-input-quantity" id="child-quantity" type="text" name="childt-quantity" value="0" placeholder="0" required>
+            <button class="modal-btn-quantity btn-child-quantity btn-child-quantity-reduce" type="button">
+              <span class="visually-hidden">Уменьшить на одного человека</span>
+            </button>
+          </div>
+          <button class="modal-btn-search" type="submit">Найти</button>
+          <button class="modal-btn-close" type="button">
+            <span class="visually-hidden">Закрыть окно</span>
+          </button>
+        </form>
+      </div>
+
     </div>
   </body>
 
