@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version,not dead
-*/
-
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
@@ -25,11 +18,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-.img {
-  max-width: 100%;
-  height: auto;
 }
 
 .visually-hidden {
@@ -127,10 +115,9 @@ body {
   position: absolute;
   content: "";
   width: calc(100% - 16px);
-  height: 2px;
   left: 8px;
   bottom: -5px;
-  background-color: #756257;
+  border: 1px solid #756257;
 }
 
 .navigation-list-link:hover {
@@ -380,8 +367,8 @@ body {
 }
 
 .advantages-item-image {
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: auto;
+  object-fit: cover;
 }
 
 .services {
@@ -541,11 +528,6 @@ body {
 
 .subscription-input-email:focus-visible {
   background-color: #E6E6E6;
-}
-
-.subscription-input-email::-moz-placeholder {
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .subscription-input-email::placeholder {
@@ -746,7 +728,6 @@ body {
 .filter {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10px;
  }
 
 .filter-group:not(:last-of-type) {
@@ -782,6 +763,7 @@ body {
 }
 
 .filter-control {
+  display: flex;
   position: relative;
   padding-left: 36px;
 }
@@ -1069,9 +1051,7 @@ body {
   background-image: url("../images/svg/arrow-to-bottom.svg");
   background-position: 260px center;
   background-repeat: no-repeat;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
 }
 
@@ -1168,8 +1148,9 @@ body {
 
 .image-hotel {
   display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .hotel-title {
@@ -1322,40 +1303,27 @@ body {
   display: none;
 }
 
-.modal-window {
+.modal-search-form {
   position: relative;
+  display: grid;
+  grid-template-columns: 137px 198px 132px 110px;
   padding: 64px 70px;
   width: 717px;
+  font-weight: 700;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+
 }
 
 .modal-search-form-title {
+  grid-column: 1/5;
   margin: 0;
   margin-bottom: 64px;
-  padding-right: 50px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-}
-
-.modal-search-form {
-  display: grid;
-  grid-template-columns: 137px 198px 132px 110px;
-  row-gap: 48px;
-  font-weight: 700;
-}
-
-.modal-input-date-wrapper-in {
-  position: relative;
-  grid-column: 2 / 5;
-}
-
-.modal-input-date-wrapper-out {
-  position: relative;
-  grid-column: 2 / 5;
-}
+  }
 
 .modal-label {
   align-self: center;
@@ -1426,7 +1394,6 @@ body {
 
 .modal-input-date {
   padding: 12px 40px 12px 20px;
-  width: 100%;
   font-family: inherit;
   font-weight: inherit;
   font-size: 18px;
@@ -1448,13 +1415,29 @@ body {
   background-color: #e6e6e6;
 }
 
+.modal-input-date:nth-of-type(1) {
+  grid-column: 2/5;
+}
+
+.modal-input-date:nth-of-type(2) {
+  grid-column: 2/5;
+}
+
 .modal-comment {
-  position: absolute;
-  bottom: -25px;
-  left: 20px;
+  margin-left: 157px;
+  margin-bottom: 23px;
+  margin-top: 4px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
+}
+
+.modal-comment:nth-of-type(1) {
+  grid-column: 1/5;
+}
+
+.modal-comment:nth-of-type(2) {
+  grid-column: 1/5;
 }
 
 .modal-comment-mistake {
@@ -1544,6 +1527,7 @@ input[type= "number"] {
 
 .modal-btn-search {
   grid-column: 1/5;
+  margin-top: 48px;
   padding: 18px 36px;
   color: #ffffff;
   font-family: inherit;
