@@ -253,38 +253,59 @@
       <div class="modal-container">
         <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
           <legend class="modal-search-form-title">Поиск гостиницы в Седоне</legend>
-          <label class="modal-label ">Дата заезда:</label>
-          <input class="modal-input-date" type="text" name="modal-input-date" value="27 апреля 2020" placeholder="Введите дату" required>
+          <label class="modal-label" for="modal-inpet-date-check-in">Дата заезда:</label>
+          <input class="modal-input-date" id="modal-inpet-date-check-in" type="text" name="modal-input-date"
+             value="27 апреля 2020" placeholder="Введите дату" required>
           <span class="modal-comment modal-comment-mistake">Мы не можем отправить вас в прошлое.</span>
-          <label class="modal-label">Дата выезда:</label>
-          <input class="modal-input-date" type="text" name="modal-input-date" value="1 сентября 2023" placeholder="Введите дату" required>
+          <label class="modal-label" for="modal-inpet-date-exit">Дата выезда:</label>
+          <input class="modal-input-date" id="modal-inpet-date-exit" type="text" name="modal-input-date"
+             value="1 сентября 2023" placeholder="Введите дату" required>
           <span class="modal-comment">На эти даты есть свободные номера. Пока есть.</span>
           <label class="modal-label" for="adult-quantity">Взрослые:</label>
           <div class="modal-quantity-wrapper">
-            <button class="modal-btn-quantity btn-adult-quantity btn-adult-quantity-increase" type="button">
-              <span class="visually-hidden">Увеличить на одного человека</span>
-            </button>
-            <input class="modal-input-quantity" id="adult-quantity" type="text" name="adult-quantity" value="2" placeholder="2" required>
-            <button class="modal-btn-quantity btn-adult-quantity btn-adult-quantity-reduce" type="button">
+            <button class="modal-btn-quantity btn-quantity-reduce" type="button">
               <span class="visually-hidden">Уменьшить на одного человека</span>
+              <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+              </svg>
+            </button>
+            <input class="modal-input-quantity" id="adult-quantity" type="text" name="adult-quantity"
+              value="2" placeholder="2" required>
+            <button class="modal-btn-quantity btn-quantity-increase" type="button">
+              <span class="visually-hidden">Увеличить на одного человека</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+              </svg>
             </button>
           </div>
           <div class="child-quantity-info">
-            <label class="modal-label" for="child-quantity">Дети:</label>
-            <button class="btn-info-about-child">i</button>
+            <label class="modal-label modal-label-child" for="child-quantity">Дети:</label>
+            <button class="btn-info-about-child" type="button">i</button>
+            <p class="child-info">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
           </div>
           <div class="modal-quantity-wrapper">
-            <button class="modal-btn-quantity btn-child-quantity btn-child-quantity-increase" type="button">
-              <span class="visually-hidden">Увеличить на одного человека</span>
-            </button>
-            <input class="modal-input-quantity" id="child-quantity" type="text" name="childt-quantity" value="0" placeholder="0" required>
-            <button class="modal-btn-quantity btn-child-quantity btn-child-quantity-reduce" type="button">
+            <button class="modal-btn-quantity btn-quantity-reduce" type="button">
+              <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
+              </svg>
               <span class="visually-hidden">Уменьшить на одного человека</span>
+            </button>
+            <input class="modal-input-quantity" id="child-quantity" type="text" name="childt-quantity"
+              value="0" placeholder="0" required>
+            <button class="modal-btn-quantity btn-quantity-increase" type="button">
+              <span class="visually-hidden">Увеличить на одного человека</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="#756157" fill-opacity="0.3"/>
+              </svg>
             </button>
           </div>
           <button class="modal-btn-search" type="submit">Найти</button>
           <button class="modal-btn-close" type="button">
             <span class="visually-hidden">Закрыть окно</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 1.29231L12.7077 0L7 5.70769L1.29231 0L0 1.29231L5.70769 7L0 12.7077L1.29231 14L7
+               8.29231L12.7077 14L14 12.7077L8.29231 7L14 1.29231Z" fill="black"/>
+            </svg>
           </button>
         </form>
       </div>
