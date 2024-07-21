@@ -56,7 +56,9 @@
               </a>
             </li>
           </ul>
-          <a class="button btn-want" href="catalog.html">Хочу сюда!</a>
+          <div class="main-navigation-button">
+            <a class="button btn-want" href="catalog.html">Хочу сюда!</a>
+          </div>
         </nav>
       </header>
 
@@ -143,7 +145,7 @@
           <p class="section-subtitle">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru" method="POST">
             <label class="subscription-form-label">
-              <label class="visually-hidden">Введите адрес электронной почты</label>
+              <span class="visually-hidden">Введите адрес электронной почты</span>
               <input class="subscription-input-email" type="email" name="email" placeholder="Ваш e-mail" required>
             </label>
             <button class="button btn-subscribe" type="submit">Подписаться</button>
@@ -252,7 +254,7 @@
       <!-- Класс для скрытия модального окна modal-container-close -->
       <div class="modal-container modal-container-close">
         <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <legend class="modal-search-form-title">Поиск гостиницы в Седоне</legend>
+          <h2 class="modal-search-form-title">Поиск гостиницы в Седоне</h2>
           <label class="modal-label" for="modal-inpet-date-check-in">Дата Заезда:</label>
           <input class="modal-input-date" id="modal-inpet-date-check-in" type="text" name="modal-input-date"
              value="27 апреля 2020" placeholder="Введите дату" required>
@@ -269,7 +271,7 @@
                 <path d="M0 0L0 2L14 2V0L0 0Z" fill="#756157" fill-opacity="0.3"/>
               </svg>
             </button>
-            <input class="modal-input-quantity" id="adult-quantity" type="text" name="adult-quantity"
+            <input class="modal-input-quantity" id="adult-quantity" type="number" name="adult-quantity"
               value="2" placeholder="2" required>
             <button class="modal-btn-quantity btn-quantity-increase" type="button">
               <span class="visually-hidden">Увеличить на одного человека</span>
@@ -290,7 +292,7 @@
               </svg>
               <span class="visually-hidden">Уменьшить на одного человека</span>
             </button>
-            <input class="modal-input-quantity" id="child-quantity" type="text" name="childt-quantity"
+            <input class="modal-input-quantity" id="child-quantity" type="number" name="childt-quantity"
               value="2" placeholder="0" required>
             <button class="modal-btn-quantity btn-quantity-increase" type="button">
               <span class="visually-hidden">Увеличить на одного человека</span>

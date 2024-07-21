@@ -55,7 +55,9 @@
               </a>
             </li>
           </ul>
-          <a class="button btn-want" href="catalog.html">Хочу сюда!</a>
+          <div class="main-navigation-button">
+            <a class="button btn-want" href="catalog.html">Хочу сюда!</a>
+          </div>
         </nav>
       </header>
 
@@ -75,7 +77,7 @@
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <span class="breadcrumbs-arrow" arial-label="hidden"></span>
+                <span class="breadcrumbs-arrow"></span>
                 <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
               </li>
             </ul>
@@ -136,7 +138,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter-group">
+              <fieldset class="filter-group-price">
                 <legend class="filter-group-title">Стоимость, &#8381;:</legend>
                 <div class="filter-price-wrapper">
                   <label class="label-filter-price">
@@ -266,8 +268,10 @@
           <h2 class="section-title">Подпишитесь на рассылку</h2>
           <p class="section-subtitle">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru" method="POST">
-            <label class="visually-hidden">Введите адрес электронной почты</label>
-            <input class="subscription-input-email" type="email" name="email" placeholder="Ваш e-mail" required>
+            <label class="subscription-form-label">
+              <span class="visually-hidden">Введите адрес электронной почты</span>
+              <input class="subscription-input-email" type="email" name="email" placeholder="Ваш e-mail" required>
+            </label>
             <button class="button btn-subscribe" type="submit">Подписаться</button>
           </form>
         </section>
