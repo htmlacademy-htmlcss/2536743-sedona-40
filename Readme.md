@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Дмитрий Дудников](https://up.htmlacademy.ru/htmlcss/40/user/2536743).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Сайт: [Мой проект Седона](https://dudnikovds.github.io/2536743-sedona-40/).
 
 ---
 
